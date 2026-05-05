@@ -1,0 +1,123 @@
+.auth-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5000; /* Higher than payment modal */
+  animation: fadeIn 0.3s ease-out;
+}
+
+.auth-card {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  animation: slideInDown 0.4s ease-out;
+  text-align: center;
+}
+
+.auth-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.auth-close-btn:hover {
+  opacity: 1;
+}
+
+.auth-card h2 {
+  margin: 0 0 10px 0;
+  font-size: 28px;
+  color: white;
+}
+
+.auth-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.auth-error {
+  background: rgba(255, 77, 77, 0.1);
+  border: 1px solid rgba(255, 77, 77, 0.3);
+  color: #ff4d4d;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.auth-submit-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px;
+  font-size: 16px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border: none;
+}
+
+.auth-switch {
+  margin-top: 20px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.auth-switch span {
+  color: var(--secondary);
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.auth-switch span:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* Strength Meter */
+.strength-meter {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+  margin-top: 8px;
+  position: relative;
+  overflow: visible;
+}
+
+.strength-bar {
+  height: 100%;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.strength-text {
+  position: absolute;
+  right: 0;
+  top: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Validation Highlights */
+.form-input.valid {
+  border-color: rgba(0, 230, 118, 0.3);
+}
+
+.form-input.valid:focus {
+  border-color: var(--success);
+}
